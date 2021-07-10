@@ -85,7 +85,7 @@
                 height: auto;
                 flex-direction: column;
                 justify-content: space-evenly;
-                background-color: rgba(0,0,0,.8);
+                background-color: rgba(0,0,0,0.9);
                 overflow: hidden;
                 box-sizing: border-box;
                 transition: all .5s ease-in-out;
@@ -115,7 +115,7 @@
         #container{
             position: relative;
             transform: translate(20%,0%);
-            margin-top: 10%;
+            margin-top: 2%;
             max-width: 70vw;
         }
         #row{
@@ -219,64 +219,67 @@
         </label>
     </nav>
 
-    <div id="container">
-        <div id="row">
-            <div id="col1">
-                <h3>Checkout</h3>
-                <hr>
-                <div>
-                    <span class="num">1</span> <span class="headlead">Your Basic Information</span> <br>
-                    <br><br>
+    <div id="main"> 
+        <div id="container">
+            <div id="row">
+                <div id="col1">
+                    <h3>Checkout</h3>
+                    <hr>
                     <div>
-                        <label for="fname">First name</label>
-                        <input type="text" name="fname" placeholder="John">
-
+                        <span class="num">1</span> <span class="headlead">Your Basic Information</span> <br>
                         <br><br>
-                        <label for="lname">Last name</label>
-                        <input type="text" name="lname" placeholder="Doe">
+                        <div>
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" placeholder="John">
+    
+                            <br><br>
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname" placeholder="Doe">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">Email address</label>
+                            <input type="email" name="email" placeholder="johndoe@example.com">
+                        </div><br>
+                    </div>
+                    <hr>
+                    <div>
+                        <br>
+                        <span class="num">2</span> <span class="headlead">Your Payment Information</span> <br>
+                        <br>
+                        <label for="credit">Credit Card</label>
+                        <input type="text" placeholder="Card number">
+                        <br>
+                    </div><br>
+                    <hr>
+                    <div>
+                        <br>
+                        <button type="submit">Confirm Booking</button>
                     </div>
                     <br>
-                    <div>
-                        <label for="email">Email address</label>
-                        <input type="email" name="email" placeholder="johndoe@example.com">
-                    </div><br>
+                    <center>
+                        <span><b>Need any help?</b> Don't hesitate to <em>contact support!</em></span>
+                        <br><br>
+                        <img height="30" src="./assets/powered-by-stripe.svg" alt="logo">
+                    </center><br>
                 </div>
-                <hr>
-                <div>
-                    <br>
-                    <span class="num">2</span> <span class="headlead">Your Payment Information</span> <br>
-                    <br>
-                    <label for="credit">Credit Card</label>
-                    <input type="text" placeholder="Card number">
-                    <br>
-                </div><br>
-                <hr>
-                <div>
-                    <br>
-                    <button type="submit">Confirm Booking</button>
+                <div id="col2">
+                    <div id="col2Heads">
+                        <h3>Quiet living outside the city</h3>
+                        <p id="price"><sup>$</sup><span><b>5,250.00</b></span></p>
+                        <p><em>Check in - 18/12/2020</em></p>
+                        <p><em>Check out - 21/12/2020</em></p>
+                        <hr>
+                    </div>
+                    <p>
+                        <blockquote>
+                            Workcation provides fast and hassle-free checkouts.
+                            <br><br>
+                            ~ Krik Beard
+                        </blockquote>
+                        <br>
+                    </p>
                 </div>
-                <br>
-                <center>
-                    <span><b>Need any help?</b> Don't hesitate to <em>contact support!</em></span>
-                    <br><br>
-                    <img height="30" src="./assets/powered-by-stripe.svg" alt="logo">
-                </center><br>
-            </div>
-            <div id="col2">
-                <div id="col2Heads">
-                    <h3>Quiet living outside the city</h3>
-                    <p id="price"><sup>$</sup><span><b>5,250.00</b></span></p>
-                    <p><em>Check in - 18/12/2020</em></p>
-                    <p><em>Check out - 21/12/2020</em></p>
-                    <hr>
-                </div>
-                <p>
-                    <blockquote>
-                        <p id="quotes">&quot;</p>
-                        Workcation provides fast and hassle-free checkouts.
-                    </blockquote>
-                    <br>
-                </p>
             </div>
         </div>
     </div>
