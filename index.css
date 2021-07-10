@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.navcontainer .left h1 {
+  margin-left: 1rem;
+  font-weight: 600;
+}
+.navcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.card .right .right_bottom div img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.card .right .right_bottom div {
+  display: flex;
+  align-items: center;
+}
+.navcontainer .left span {
+  color: rgb(129, 128, 165);
+}
+input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d5d8f7;
+  border-radius: 5px;
+}
+label {
+  margin-bottom: 8px;
+  color: rgb(71, 70, 70);
+  margin-top: 1rem;
+}
+/* Navbar */
+nav {
+  background: rgb(38, 38, 39);
+  color: white;
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+.left-bottom,
+.left-middle,
+.left-top {
+  padding: 1rem 0;
+}
+nav .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .right h3 {
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  font-size: 1rem;
+}
+nav .right img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+/* card */
+
+.card {
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+  box-shadow: 10px 10px 10px 10px rgb(204, 202, 198);
+}
+.card .left {
+  flex: 5.5;
+  padding: 2rem;
+}
+.card .left h1 {
+  font-weight: 100;
+  color: #333;
+}
+.card .FirstName,
+.card .LastName {
+  width: 48%;
+}
+.button1 {
+  background: rgb(44, 54, 138);
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: rgb(236, 230, 230);
+}
+.card .right {
+  flex: 4.5;
+  background: #181166;
+  color: white;
+  padding: 0 1rem;
+}
+.card .right .right_top p:first-child {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.card .right_top {
+  border-bottom: 2px solid white;
+}
+.card .right_top span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+.card .right_bottom p {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.card .right_top span:last-child {
+  padding-bottom: 2rem;
+}
+.card .right .right_top h1 {
+  font-weight: 200;
+  font-size: 2.8rem;
+}
+.card .Info {
+  display: flex;
+  align-items: center;
+}
+.card .Names {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .Names .FirstName {
+  display: flex;
+  flex-direction: column;
+}
+.card .Names .LastName {
+  display: flex;
+  flex-direction: column;
+}
+.card .Email,
+.card .Credit_Card {
+  display: flex;
+  flex-direction: column;
+}
+.button1 {
+  color: rgb(250, 250, 250);
+}
+.button2 {
+  padding: 0.6rem;
+  border: 1px solid rgb(126, 136, 233);
+  border-radius: 5px;
+  color: rgb(156, 140, 216);
+  background: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.left-bottom {
+  margin-top: 2rem;
+}
+.card .left-bottom {
+  text-align: center;
+}
+.card .left-bottom p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card .left-bottom p img {
+  margin-right: 5px;
+}
+
+.button1 {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+.card .Info span {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  color: rgb(134, 131, 131);
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #4338ca;
+}
+.card .Info p {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+.card .right {
+  padding: 1rem;
+}
+.card .right p {
+  margin-bottom: 1rem;
+}
+.mobileRight {
+  display: none;
+}
+.card .button1 {
+  margin-bottom: 1rem;
+}
+.card .left-bottom p {
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+  }
+  .card .left-bottom,
+  .left-top,
+  .left-middle {
+    padding: 1rem 0;
+  }
+  .card .right {
+    padding: 2rem 1rem;
+  }
+  .card .button1 {
+    margin-bottom: 1rem;
+  }
+  .card .left-bottom p {
+    margin-bottom: 1rem;
+  }
+  .card .right_bottom p {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .mobileRight {
+    display: inline-block;
+  }
+  .navcontainer .right {
+    display: none;
+  }
+  nav {
+    padding: 1rem;
+  }
+  .card {
+    margin-bottom: 1rem;
+  }
+  .card .right {
+    padding: 1rem;
+  }
+  .card .right_top {
+    padding: 1rem;
+  }
+  .card .right_bottom {
+    padding: 1rem;
+  }
+  .card .left-bottom p {
+    padding: 1rem;
+    display: inline-block;
+  }
+  .card .left-bottom p img {
+    margin-top: 1rem;
+  }
+  .card .left-bottom,
+  .card .left-top,
+  .card .left-middle {
+    padding: 2rem 0;
+  }
+  .card {
+    max-width: 95%;
+  }
+  .card .right_bottom p {
+    margin-bottom: 1rem;
+  }
+}
