@@ -1,4 +1,4 @@
-# It works on Localh
+# It works on Localhost
 
 Designing is thinking made visual. A technical event where all the participants will be given a UI template and all the participants are required to design a webpage in a desktop as well as a mobile view based on the given template.
 
