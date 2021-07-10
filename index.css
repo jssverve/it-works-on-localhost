@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #f9fafb;
+    font-family: "Roboto", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10%;
+    align-items: center;
+    background: #111827;
+}
+.payment-card{
+    display: flex;
+    margin: 3rem auto;
+    width: 60%;
+    height: 80%;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-shadow: 1px 3px 10px #e5e7eb;
+    border-radius: 1%;
+}
+.form-group{
+    width: 65%;
+    height: 100%;
+}
+.ad{
+    color: white;
+    width: 35%;
+    height: 100%;
+    background-color: #3730A3;
+    border-bottom-right-radius: 1%;
+    border-top-right-radius: 1%;
+}
+.details{
+    margin: 2rem 1rem;
+}
+.details div{
+    margin: 2rem 0;
+}
+.cash{
+    font-size: 4rem;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 1rem;
+    border-radius: 7px;
+    transition: all .3s ease;
+}
+.profile-icon{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+.menu{
+    background-color: #ffffff;
+}
+.btn-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-group div{
+    width: 95%;
+    margin: 20px 0;
+}
+.btn{
+    background-color: #4f46e5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 20px;
+}
+.help{
+    text-align: center;
+    fill:#4f46e5;
+}
+.question{
+    height: 1rem;
+    position: relative;
+    top: 2px;
+    color: #4f46e5;
+}
+.powered {
+    text-align: center;
+}
+.forms{
+    margin: 2rem ;
+}
+.heading{
+    font-size: 2rem;
+    margin: 2rem;
+}
+.head{
+    font-size: 1.5rem;
+}
+.head .step-num{
+    font-size: 1rem;
+    color: #4f46e5;
+    border: 1px solid #4f46e5;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    ul {
+        display: none;
+        visibility: hidden;
+    }
+
+    .menu{
+        display: block;
+    }
+}
+
+@media (max-width:500px){
+    .payment-gateway{
+        flex-direction: column;
+    }
+}
