@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WorkCation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: #d1d5db;
+      }
+      .navbar {
+        background-color: #111827;
+        color: white;
+        display: flex;
+        height: 60px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .links {
+        display: flex;
+        position: relative;
+        right: 10%;
+      }
+      .link1,
+      .link2,
+      .link3 {
+        margin-right: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .menu-icon {
+        display: none;
+      }
+      .container {
+        height: calc(100% - 60px);
+      }
+      .content {
+        height: 80%;
+        width: 70%;
+        background-color: #f9fafb;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        border-radius: 10px;
+      }
+      .left-part {
+        padding-top: 3%;
+        padding-left: 5%;
+        width: 80%;
+        height: 100vh;
+      }
+      hr {
+        margin-bottom: 10px;
+      }
+      .hr {
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      .left-part h1 {
+        margin-bottom: 2%;
+      }
+      .first {
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+      .circle1,
+      .circle2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 2px solid #6366f1;
+        margin-right: 10px;
+      }
+      .button {
+        background-color: #4338CA;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        width: 90%;
+        text-align: center;
+        margin: 5px auto;
+        height: 30px;
+        color: white;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .qm {
+        display: inline-block;
+        height: 5px;
+      }
+      .right-part {
+        background-color: #312e81;
+        width: 30%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: white;
+        padding: 2%;
+      }
+      .check {
+        color: #D1D5DB;
+      }
+      .quote1, .quote2 {
+        font-size: 5rem;
+      }
+      @media only screen and (max-width: 430px) {
+        .right-part {
+          border-radius: 10px;
+        }
+        .left-part {
+          
+        }
+        .links {
+          display: none;
+        }
+        .menu-icon {
+          display: block;
+          position: relative;
+          right: 10px;
+        }
+  .content {
+    display: block;
+  }
+  .right-part {
+    width: 100%;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" id="nav-bar">
+      <div class="logo">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 185 32"
+          height="32"
+          width="auto"
+        >
+          <path
+            fill="#A5B4FC"
+            d="M121.09 28.336c2.352 0 4.392-1.248 5.424-3.12l-2.688-1.536c-.48.984-1.512 1.584-2.76 1.584-1.848 0-3.216-1.368-3.216-3.264 0-1.92 1.368-3.288 3.216-3.288 1.224 0 2.256.624 2.736 1.608l2.664-1.56c-.984-1.848-3.024-3.096-5.376-3.096-3.648 0-6.336 2.76-6.336 6.336 0 3.576 2.688 6.336 6.336 6.336zM137.084 16v1.416c-.864-1.08-2.16-1.752-3.912-1.752-3.192 0-5.832 2.76-5.832 6.336 0 3.576 2.64 6.336 5.832 6.336 1.752 0 3.048-.672 3.912-1.752V28h3.096V16h-3.096zm-3.336 9.384c-1.896 0-3.312-1.368-3.312-3.384s1.416-3.384 3.312-3.384c1.92 0 3.336 1.368 3.336 3.384s-1.416 3.384-3.336 3.384zM149.851 18.976V16h-2.712v-3.36l-3.096.936V16h-2.088v2.976h2.088v4.992c0 3.24 1.464 4.512 5.808 4.032v-2.808c-1.776.096-2.712.072-2.712-1.224v-4.992h2.712zM153.57 14.56c1.056 0 1.92-.864 1.92-1.896s-.864-1.92-1.92-1.92c-1.032 0-1.896.888-1.896 1.92s.864 1.896 1.896 1.896zM152.034 28h3.096V16h-3.096v12zM163.676 28.336c3.528 0 6.36-2.76 6.36-6.336 0-3.576-2.832-6.336-6.36-6.336-3.528 0-6.336 2.76-6.336 6.336 0 3.576 2.808 6.336 6.336 6.336zm0-3.024c-1.824 0-3.24-1.368-3.24-3.312 0-1.944 1.416-3.312 3.24-3.312 1.848 0 3.264 1.368 3.264 3.312 0 1.944-1.416 3.312-3.264 3.312zM178.886 15.664c-1.608 0-2.856.6-3.576 1.68V16h-3.096v12h3.096v-6.48c0-2.088 1.128-2.976 2.64-2.976 1.392 0 2.376.84 2.376 2.472V28h3.096v-7.368c0-3.192-1.992-4.968-4.536-4.968z"
+          />
+          <path
+            fill="#FFFFFF"
+            d="M61.063 28h3.768l3.144-11.088L71.143 28h3.768l4.704-16.8h-3.48L72.92 23.656 69.391 11.2H66.56l-3.504 12.456L59.84 11.2h-3.48L61.063 28zM85.674 28.336c3.528 0 6.36-2.76 6.36-6.336 0-3.576-2.832-6.336-6.36-6.336-3.528 0-6.336 2.76-6.336 6.336 0 3.576 2.808 6.336 6.336 6.336zm0-3.024c-1.824 0-3.24-1.368-3.24-3.312 0-1.944 1.416-3.312 3.24-3.312 1.848 0 3.264 1.368 3.264 3.312 0 1.944-1.416 3.312-3.264 3.312zM97.308 18.064V16h-3.096v12h3.096v-5.736c0-2.52 2.04-3.24 3.648-3.048V15.76c-1.512 0-3.024.672-3.648 2.304zM113.831 28l-4.968-6.072L113.687 16h-3.696l-4.128 5.28V11.2h-3.096V28h3.096v-5.448L110.231 28h3.6z"
+          />
+          <path
+            fill="#A5B4FC"
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M43.911 12.604L36.213 8.16v20.645h9v2h-44v-2h4v-12.72l-3.728.933L1 15.078l21.09-5.273h3.122a9.552 9.552 0 0 0-.68 2.559l-.483 3.975 5.164-2.982v15.448h5V8.161l-7.696 4.444a7.502 7.502 0 0 1 2.565-4.8h-4.12a7.489 7.489 0 0 1 6.646-2.973l-5.591-3.228a7.488 7.488 0 0 1 6.696.402c1.039.6 1.88 1.41 2.5 2.347a7.461 7.461 0 0 1 2.5-2.347 7.49 7.49 0 0 1 6.698-.402l-5.593 3.228a7.488 7.488 0 0 1 6.646 2.973h-4.12a7.498 7.498 0 0 1 2.567 4.8zM25.213 28.805v-10h-6v10h6zm-11-8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"
+          />
+        </svg>
+      </div>
+      <div class="links">
+        <div class="link1"><a href="#">List your property</a></div>
+        <div class="link2"><a href="#">Bookings</a></div>
+        <div class="link3"><a href="#">Messages</a></div>
+      </div>
+      <div class="menu-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          height="24"
+          width="24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="content">
+        <div class="left-part">
+          <h1>Checkout</h1>
+          <hr />
+          <div class="first">
+            <span class="circle1">1</span>
+            <p>Your Basic Information</p>
+          </div>
+          <form>
+            <div class="input-name">
+              <label for="First name" class="fn">First name</label>
+              <input type="text" class="input-fn" placeholder="John"/>
+              <label for="Last name" class="ln">Last name</label>
+              <input type="text" name="" class="input-ln" placeholder="Oe" />
+            </div>
+            <label for="email">Email address</label>
+            <input type="text" placeholder="johnoe@example.com">
+          </form>
+          <hr class="hr">
+          <div class="first">
+            <span class="circle2">2</span>
+            <p>Your Payment Information</p>
+          </div>
+          <form action="">
+            <label for="Credit-card">Credit card</label>
+            <input type="text" placeholder="Card number">
+          </form>
+          <hr class="hr">
+          <div class="button">Confirm booking</div>
+           <p><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="14" width="24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg><b>Need any help?</b> Don't hesitate to <u>contact support</u></p>
+        
+          <svg xmlns="http://www.w3.org/2000/svg" fill="#818CF8" viewBox="0 0 150 34" height="32" width="auto">
+            <path
+                d="M146 0H3.73A3.73 3.73 0 000 3.73v26.54A3.73 3.73 0 003.73 34H146a4 4 0 004-4V4a4 4 0 00-4-4zm3 30a3 3 0 01-3 3H3.73A2.74 2.74 0 011 30.27V3.73A2.74 2.74 0 013.73 1H146a3 3 0 013 3z" />
+            <path
+                d="M17.07 11.24h-4.3V22h1.92v-4.16h2.38c2.4 0 3.9-1.16 3.9-3.3s-1.5-3.3-3.9-3.3zm-.1 5h-2.28v-3.3H17c1.38 0 2.11.59 2.11 1.65s-.76 1.6-2.11 1.6zM25.1 14a3.77 3.77 0 00-3.8 4.09 3.81 3.81 0 107.59 0A3.76 3.76 0 0025.1 14zm0 6.67c-1.22 0-2-1-2-2.58s.76-2.58 2-2.58 2 1 2 2.58-.79 2.57-2 2.57zM36.78 19.35l-1.41-5.22h-1.48l-1.4 5.22-1.42-5.22h-1.85l2.37 7.88h1.56l1.44-5.16 1.44 5.16h1.56l2.37-7.88h-1.78l-1.4 5.22zM44 14a3.83 3.83 0 00-3.75 4.09 3.79 3.79 0 003.83 4.09A3.47 3.47 0 0047.49 20L46 19.38a1.78 1.78 0 01-1.83 1.26A2.12 2.12 0 0142 18.47h5.52v-.6C47.54 15.71 46.32 14 44 14zm-1.93 3.13A1.92 1.92 0 0144 15.5a1.56 1.56 0 011.69 1.62zM50.69 15.3v-1.17h-1.8V22h1.8v-4.13a1.89 1.89 0 012-2 4.68 4.68 0 01.66 0v-1.8h-.51a2.29 2.29 0 00-2.15 1.23zM57.48 14a3.83 3.83 0 00-3.75 4.09 3.79 3.79 0 003.83 4.09A3.47 3.47 0 0060.93 20l-1.54-.59a1.78 1.78 0 01-1.83 1.26 2.12 2.12 0 01-2.1-2.17H61v-.6c0-2.19-1.24-3.9-3.52-3.9zm-1.93 3.13a1.92 1.92 0 011.92-1.62 1.56 1.56 0 011.69 1.62zM67.56 15a2.85 2.85 0 00-2.26-1c-2.21 0-3.47 1.85-3.47 4.09s1.26 4.09 3.47 4.09a2.82 2.82 0 002.26-1V22h1.8V11.24h-1.8zm0 3.35a2 2 0 01-2 2.28c-1.31 0-2-1-2-2.52s.7-2.52 2-2.52c1.11 0 2 .81 2 2.29zM79.31 14A2.88 2.88 0 0077 15v-3.76h-1.8V22H77v-.83a2.86 2.86 0 002.27 1c2.2 0 3.46-1.86 3.46-4.09S81.51 14 79.31 14zM79 20.6a2 2 0 01-2-2.28v-.47c0-1.48.84-2.29 2-2.29 1.3 0 2 1 2 2.52s-.75 2.52-2 2.52zM86.93 19.66L85 14.13h-1.9l2.9 7.59-.3.74a1 1 0 01-1.14.79 4.12 4.12 0 01-.6 0v1.51a4.62 4.62 0 00.73.05 2.67 2.67 0 002.78-2l3.24-8.62h-1.89zM125 12.43a3 3 0 00-2.13.87l-.14-.69h-2.39v12.92l2.72-.59v-3.13a3 3 0 001.93.7c1.94 0 3.72-1.59 3.72-5.11 0-3.22-1.8-4.97-3.71-4.97zm-.65 7.63a1.61 1.61 0 01-1.28-.52v-4.11a1.64 1.64 0 011.3-.55c1 0 1.68 1.13 1.68 2.58s-.69 2.6-1.7 2.6zM133.73 12.43c-2.62 0-4.21 2.26-4.21 5.11 0 3.37 1.88 5.08 4.56 5.08a6.12 6.12 0 003-.73v-2.25a5.79 5.79 0 01-2.7.62c-1.08 0-2-.39-2.14-1.7h5.38v-1c.09-2.87-1.27-5.13-3.89-5.13zm-1.47 4.07c0-1.26.77-1.79 1.45-1.79s1.4.53 1.4 1.79zM113 13.36l-.17-.82h-2.32v9.71h2.68v-6.58a1.87 1.87 0 012.05-.58v-2.55a1.8 1.8 0 00-2.24.82zM99.46 15.46c0-.44.36-.61.93-.61a5.9 5.9 0 012.7.72v-2.63a7 7 0 00-2.7-.51c-2.21 0-3.68 1.18-3.68 3.16 0 3.1 4.14 2.6 4.14 3.93 0 .52-.44.69-1 .69a6.78 6.78 0 01-3-.9V22a7.38 7.38 0 003 .64c2.26 0 3.82-1.15 3.82-3.16-.05-3.36-4.21-2.76-4.21-4.02zM107.28 10.24l-2.65.58v8.93a2.77 2.77 0 002.82 2.87 4.16 4.16 0 001.91-.37V20c-.35.15-2.06.66-2.06-1v-4h2.06v-2.34h-2.06zM116.25 11.7l2.73-.57V8.97l-2.73.57v2.16zM116.25 12.61h2.73v9.64h-2.73z" />
+        </svg>
+        
+        </div>
+        <div class="right-part">
+          <h4>Quiet living outside the city</h4>
+          <span>₹</span>
+          <h1>5,250.00</h1>
+          <p class="check">Check in - 18/12/2020</p>
+          <p class="check">Check out - 21/12/2020</p>
+          <hr>
+          <span class="quote1">&#8216 </span><span class="quote2">&#8216 </span>
+          <blockquote>Workcation provides fast and hassle-free Checkouts.</blockquote>
+          <span class="circle1" style="display: inline-block;"></span>
+          <b>Kirk Beard</b>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
