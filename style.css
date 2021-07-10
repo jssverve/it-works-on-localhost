@@ -1,5 +1,5 @@
 body{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -59,12 +59,15 @@ li img{
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    box-shadow: 2px 2px 5px;
 }
 
 .left{
     max-width: 65%;
     background-color: #fff;
     padding: 1.5rem 2rem;
+    box-shadow: 2px 2px 5px;
+    margin-left: auto;
 }
 
 .oneAndTwo{
@@ -111,8 +114,9 @@ section{
     text-align: center;
 }
 
-.need, .qm{
+.need{
     display: inline-block;
+    width: 80%;
 }
 
 button{
@@ -133,7 +137,10 @@ section p{
     background-color: #3730A3;
     color: #fff;
     padding: 1.5rem 2rem;
+    box-shadow: -2px 2px 10px;
+    margin-right: auto;
 }
+
 
 .cost{
     font-size: 2rem;
@@ -146,6 +153,11 @@ section p{
 .right img{
     width: 2.5rem;
     border-radius: 50%;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
 }
 
 .quote{
@@ -167,9 +179,35 @@ section p{
 @media (max-width:615px){
     .container{
         flex-direction: column;
+        padding: 2rem .5rem;
     }
 
     .left, .right{
-        max-width: 50%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .dropdown{
+        display: flex;
+    }
+
+    .list{
+        flex-direction: column;
+    }
+
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-list{
+        display: none;
+    }
+
+    .navbar-list li{
+        padding: 5%;
+    }
+
+    .active{
+        display: flex;
     }
 }
