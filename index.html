@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        nav {
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0 10%;
+            height: 60px;
+            background-color: #312E81;
+        }
+        nav .logo {
+            float: left;
+            width: 40%;
+            height: 100%;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+        }
+        nav .links {
+            float: right;
+            padding: 0;
+            margin: 0;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        nav .links li {
+            list-style: none;
+        }
+        nav .links a {
+            display: block;
+            padding: 1em;
+            font-size: 16px;
+            color: #fff;
+            text-decoration: none;
+        }
+        #nav-toggle {
+            position: absolute;
+            top: -100px;
+        }
+        nav .icon-burger {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        nav .icon-burger .line {
+            width: 30px;
+            height: 5px;
+            background-color: #fff;
+            margin: 5px;
+            border-radius: 3px;
+            transition: all .3s ease-in-out;
+        }
+        @media screen and (max-width: 768px) {
+            nav .logo {
+                float: none;
+                width: auto;
+            }
+            nav .links {
+                float: none;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 60px;
+                bottom: 100%;
+                width: auto;
+                height: auto;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color: rgba(0,0,0,0.9);
+                overflow: hidden;
+                box-sizing: border-box;
+                transition: all .5s ease-in-out;
+            }
+            nav .links a {
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+            nav :checked ~ .links {
+                bottom: 0;
+            }
+            nav .icon-burger {
+                display: block;
+            }
+            nav :checked ~ .icon-burger .line:nth-child(1) {
+                transform: translateY(10px) rotate(225deg);
+            }
+            nav :checked ~ .icon-burger .line:nth-child(3) {
+                transform: translateY(-10px) rotate(-225deg);
+            }
+            nav :checked ~ .icon-burger .line:nth-child(2) {
+                opacity: 0;
+            }
+        }
+
+
+        #container{
+            position: relative;
+            transform: translate(20%,0%);
+            margin-top: 2%;
+            max-width: 70vw;
+        }
+        #row{
+            width: 100%;
+            height: 10vh;
+        }
+        #col1{
+            width: 50%;
+            float: left;
+        }
+        #col1 img{
+            width: 100%;
+        }
+        #col2{
+            background: linear-gradient(90deg,#3730A3,#4338CA);
+            width: 47%;
+            height: auto;
+            float: right;
+            margin-left: 3%;
+        }
+        #col2Heads{
+            color: #EEF2FF;
+            padding: 10px;
+        }
+        #col2Heads h3{
+            width: 100%;
+            font-size: 2em;
+        }
+        #col2Heads p{
+            width: 100%;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        #price{
+            font-size: 3em;
+        }
+        blockquote{
+            color: white;
+            font-size: 2em;
+            padding-top: -5%;
+        }
+        input[type='text'], input[type='email']{
+            width: 20vw;
+            border: 2px solid #9CA3AF;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        input[type='text']:focus, input[type='email']:focus{
+           border:none;
+        }
+        .num{
+            border-radius: 50%;
+            padding: 15px;
+        }
+        .headlead{
+            padding-left: 3%;
+            font-size: 1.3em;
+            color: #606163;
+        }
+        input[type='email']{
+            margin-left: -4%;
+        }
+        label{
+            margin-right: 5%;
+        }
+        button{
+            background-color: green;
+            color: white;
+            padding: 15px;
+            letter-spacing: 2px;
+            border: none;
+            border-radius: 5px;
+        }
+        @media (max-width:1200px) {
+            #col1{
+                width: 100%;
+            }
+            #col2{
+                width: 100%;
+            }
+            input[type='text'], input[type='email']{
+                width: 30vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo"><span><img src="./assets/logo.svg" alt="abc"></span></div>
+        <ul class="links">
+            <li><a href="#">List your property</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><img src="./assets/question-mark-circle.svg" alt="pic"></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+
+    <div id="main"> 
+        <div id="container">
+            <div id="row">
+                <div id="col1">
+                    <h3>Checkout</h3>
+                    <hr>
+                    <div>
+                        <span class="num">1</span> <span class="headlead">Your Basic Information</span> <br>
+                        <br><br>
+                        <div>
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" placeholder="John">
+    
+                            <br><br>
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname" placeholder="Doe">
+                        </div>
+                        <br>
+                        <div>
+                            <label for="email">Email address</label>
+                            <input type="email" name="email" placeholder="johndoe@example.com">
+                        </div><br>
+                    </div>
+                    <hr>
+                    <div>
+                        <br>
+                        <span class="num">2</span> <span class="headlead">Your Payment Information</span> <br>
+                        <br>
+                        <label for="credit">Credit Card</label>
+                        <input type="text" placeholder="Card number">
+                        <br>
+                    </div><br>
+                    <hr>
+                    <div>
+                        <br>
+                        <button type="submit">Confirm Booking</button>
+                    </div>
+                    <br>
+                    <center>
+                        <span><b>Need any help?</b> Don't hesitate to <em>contact support!</em></span>
+                        <br><br>
+                        <img height="30" src="./assets/powered-by-stripe.svg" alt="logo">
+                    </center><br>
+                </div>
+                <div id="col2">
+                    <div id="col2Heads">
+                        <h3>Quiet living outside the city</h3>
+                        <p id="price"><sup>$</sup><span><b>5,250.00</b></span></p>
+                        <p><em>Check in - 18/12/2020</em></p>
+                        <p><em>Check out - 21/12/2020</em></p>
+                        <hr>
+                    </div>
+                    <p>
+                        <blockquote>
+                            Workcation provides fast and hassle-free checkouts.
+                            <br><br>
+                            ~ Krik Beard
+                        </blockquote>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
